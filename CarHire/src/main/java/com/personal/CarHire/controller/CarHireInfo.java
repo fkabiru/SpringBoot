@@ -37,7 +37,7 @@ public class CarHireInfo {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         JSONObject carJsonObject = new JSONObject();
-        carJsonObject.put("color", cdtls.getColor());
+//        carJsonObject.put("color", cdtls.getColor());
         carJsonObject.put("ingineNo", cdtls.getIngineNo());
         carJsonObject.put("yearManufactured", cdtls.getYearManufactured());
 
