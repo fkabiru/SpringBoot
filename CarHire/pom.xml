@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.personal</groupId>
-    <artifactId>carMan</artifactId>
-    <version>0.0.1</version>
-    <name>carMan</name>
-    <description>Car hire management with Spring Boot</description>
+    <artifactId>CarHire</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>CarHire</name>
+    <description>Car hire client project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -32,8 +32,10 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <groupId>net.minidev</groupId>
+            <artifactId>json-smart</artifactId>
+            <version>2.4.7</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
 
@@ -45,4 +47,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
