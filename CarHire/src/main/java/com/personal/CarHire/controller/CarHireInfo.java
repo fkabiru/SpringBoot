@@ -38,16 +38,7 @@ public class CarHireInfo {
                 + "ENGINE:"+cdtls.getEngineNo()+" YEAR :"+cdtls.getYearManufactured());
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-<<<<<<< HEAD
-        
-=======
-        JSONObject carJsonObject = new JSONObject();
-//        carJsonObject.put("color", cdtls.getColor());
-        carJsonObject.put("ingineNo", cdtls.getIngineNo());
-        carJsonObject.put("yearManufactured", cdtls.getYearManufactured());
-
->>>>>>> 4d072d0969959c84a8f440473d38c99acbcf8faa
-        CarDetails cdts = new CarDetails();
+            CarDetails cdts = new CarDetails();
         cdts.setColor(cdtls.getColor());
         cdts.setEngineNo(cdtls.getEngineNo());
         cdts.setYearManufactured(cdtls.getYearManufactured());
