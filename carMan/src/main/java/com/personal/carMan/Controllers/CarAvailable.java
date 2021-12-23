@@ -36,8 +36,9 @@ public class CarAvailable {
     public ResponseEntity<List> findAllCars(){
         return new ResponseEntity(crDtls.allCars(),HttpStatus.OK)  ;
     }
-    @PostMapping("/addCar")
+    @PostMapping(value="/addCar",consumes = "application/json", produces = "application/json")
     public ResponseEntity <List> createOneCar(@RequestBody CarDetails carDtls){
+        System.out.print("***NEW CAR DETAILS****\n  "+carDtls.getEngineNo()+", "+carDtls.getYearManufactured());
          return new ResponseEntity(crDtls.createCar(carDtls),HttpStatus.OK);
     }
 }

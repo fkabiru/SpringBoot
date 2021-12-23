@@ -11,16 +11,16 @@ package com.personal.CarHire.Entity;
 public class CarDetails {
     
      private String color;
-    private String ingineNo;
+    private String engineNo;
     private String yearManufactured;
     
     public CarDetails(){
         
     }
 
-    public CarDetails(String color,String ingineNo,String yearManufactured){
+    public CarDetails(String color,String engineNo,String yearManufactured){
         this.color = color;
-        this.ingineNo = ingineNo;
+        this.engineNo = engineNo;
         this.yearManufactured = yearManufactured;
         
     }
@@ -32,12 +32,12 @@ public class CarDetails {
         this.color = color;
     }
 
-    public String getIngineNo() {
-        return ingineNo;
+    public String getEngineNo() {
+        return engineNo;
     }
 
-    public void setIngineNo(String ingineNo) {
-        this.ingineNo = ingineNo;
+    public void setEngineNo(String engineNo) {
+        this.engineNo = engineNo;
     }
 
     public String getYearManufactured() {
