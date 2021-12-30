@@ -25,7 +25,7 @@ import org.springframework.web.client.RestTemplate;
 public class CarHireInfo {
 
     RestTemplate rstmp;
-    String carCreateUrls = "http://localhost:8081/addCar";
+    String carCreateUrls = "http://localhost:8085/addCar";
 
     public CarHireInfo() {
         this.rstmp = new RestTemplate();
@@ -33,17 +33,17 @@ public class CarHireInfo {
 
     @PostMapping(value = "/clientCreateCar", consumes = "application/json", produces = "application/json")
     public ResponseEntity<String> createCar(@RequestBody CarDetails cdtls) {
-        
-        System.out.print("----Request : COLOR :"+cdtls.getColor()+", "
-                + "ENGINE:"+cdtls.getEngineNo()+" YEAR :"+cdtls.getYearManufactured());
+
+        System.out.print("----Request : COLOR :" + cdtls.getColor() + ", "
+                + "ENGINE:" + cdtls.getEngineNo() + " YEAR :" + cdtls.getYearManufactured());
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-            CarDetails cdts = new CarDetails();
+        CarDetails cdts = new CarDetails();
         cdts.setColor(cdtls.getColor());
         cdts.setEngineNo(cdtls.getEngineNo());
         cdts.setYearManufactured(cdtls.getYearManufactured());
-        
-            HttpEntity<CarDetails> request = new HttpEntity<>(cdts,headers);
+
+        HttpEntity<CarDetails> request = new HttpEntity<>(cdts, headers);
 
         String response = rstmp.postForObject(carCreateUrls, request, String.class);
         System.out.print("||||****** Now Posting *******|||||");
