@@ -10,11 +10,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -38,8 +36,9 @@ public class CarAvailable {
     public ResponseEntity<List> findAllCars(){
         return new ResponseEntity(crDtls.allCars(),HttpStatus.OK)  ;
     }
-    @PostMapping("/addCar")
+    @PostMapping(value="/addCar",consumes = "application/json", produces = "application/json")
     public ResponseEntity <List> createOneCar(@RequestBody CarDetails carDtls){
+        System.out.print("***NEW CAR DETAILS****\n  "+carDtls.getEngineNo()+", "+carDtls.getYearManufactured());
          return new ResponseEntity(crDtls.createCar(carDtls),HttpStatus.OK);
     }
 }
